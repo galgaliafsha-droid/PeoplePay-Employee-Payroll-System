@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block heading %}Leave requests{% endblock %}{% block content %}
+<div class="page-intro"><p class="muted">Submit time-off requests and review their status.</p></div>
+<div class="panel"><div class="panel-head"><h3>Apply for leave</h3></div><form id="leaveForm" class="form-grid"><label>Employee *<select name="employee_id" id="leaveEmployee" required></select></label><label>From date *<input type="date" name="from_date" required></label><label>To date *<input type="date" name="to_date" required></label><label>Reason *<input name="reason" required placeholder="Reason for leave"></label><div class="form-actions"><button class="primary">Submit request</button></div></form></div>
+<div class="panel"><div class="panel-head"><h3>All requests</h3></div><div class="table-wrap"><table><thead><tr><th>EMPLOYEE</th><th>FROM</th><th>TO</th><th>REASON</th><th>STATUS</th><th>ACTION</th></tr></thead><tbody id="leaveRows"></tbody></table></div></div>
+{% endblock %}{% block scripts %}<script>initLeaves();</script>{% endblock %}

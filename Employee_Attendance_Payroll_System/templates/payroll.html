@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block heading %}Payroll{% endblock %}{% block content %}
+<div class="page-intro"><p class="muted">Calculate monthly salary based on recorded attendance.</p></div>
+<div class="panel"><div class="panel-head"><div><h3>Run monthly payroll</h3><p class="muted">Demo calculation uses a 30-day salary month. Approved leave is treated as paid leave in this starter.</p></div></div><form id="payrollForm" class="inline-form"><label>Payroll month<input type="month" name="month" id="payrollMonth" required></label><button class="primary">Calculate payroll</button></form></div>
+<div class="panel"><div class="panel-head"><h3>Payroll history</h3><input type="month" id="payrollFilter" class="search"></div><div class="table-wrap"><table><thead><tr><th>EMPLOYEE</th><th>BASIC</th><th>ALLOWANCES</th><th>DEDUCTIONS</th><th>PRESENT</th><th>ABSENT</th><th>NET SALARY</th></tr></thead><tbody id="payrollRows"></tbody></table></div></div>
+{% endblock %}{% block scripts %}<script>initPayroll();</script>{% endblock %}

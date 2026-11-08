@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block heading %}Dashboard{% endblock %}{% block content %}
+<div class="welcome"><div><p class="eyebrow">OVERVIEW · {{ username }}</p><h2>Your workforce at a glance</h2><p class="muted">Here is what is happening across your organization today.</p></div><div class="date-pill" id="today"></div></div>
+<div class="stats">
+<div class="stat-card"><div class="stat-top"><span>Total employees</span><span class="stat-icon blue">♙</span></div><strong id="totalEmployees">—</strong><small>Active team members</small></div>
+<div class="stat-card"><div class="stat-top"><span>Present today</span><span class="stat-icon green">✓</span></div><strong id="presentToday">—</strong><small>Present + half-day</small></div>
+<div class="stat-card"><div class="stat-top"><span>Absent today</span><span class="stat-icon orange">◷</span></div><strong id="absentToday">—</strong><small>Marked absent</small></div>
+<div class="stat-card"><div class="stat-top"><span>Monthly payroll</span><span class="stat-icon purple">₹</span></div><strong id="monthlyPayroll">—</strong><small>Net salary total</small></div></div>
+<div class="panel"><div class="panel-head"><div><h3>Quick actions</h3><p class="muted">Jump into your daily workflow</p></div></div><div class="quick-grid"><a href="/employees" class="quick-card"><span>♙</span><b>Manage employees</b><small>Add or update team details</small></a><a href="/attendance" class="quick-card"><span>◷</span><b>Mark attendance</b><small>Record daily attendance</small></a><a href="/leaves" class="quick-card"><span>▤</span><b>Review leave</b><small>Approve or reject requests</small></a><a href="/payroll" class="quick-card"><span>₹</span><b>Run payroll</b><small>Calculate monthly salaries</small></a></div></div>
+{% endblock %}{% block scripts %}<script>loadDashboard();</script>{% endblock %}

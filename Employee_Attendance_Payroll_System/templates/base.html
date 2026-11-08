@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PeoplePay | Employee Management</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head><body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-mark">P</span><span>PeoplePay<small>WORKFORCE PORTAL</small></span></div>
+  <div class="nav-label">WORKSPACE</div>
+  <a href="/dashboard">▦ &nbsp; Dashboard</a>
+  <a href="/employees">♙ &nbsp; Employees</a>
+  <a href="/attendance">◷ &nbsp; Attendance</a>
+  <a href="/leaves">▤ &nbsp; Leave requests</a>
+  <a href="/payroll">₹ &nbsp; Payroll</a>
+  <a href="/reports">▥ &nbsp; Reports</a>
+  <div class="sidebar-bottom"><div class="user-chip"><div class="avatar">A</div><div><b>{{ session.get('username','Admin') }}</b><small>{{ session.get('role','admin')|title }}</small></div></div><button class="logout" onclick="logout()">Sign out ↗</button></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><span class="eyebrow">PEOPLE OPERATIONS</span><h1>{% block heading %}Dashboard{% endblock %}</h1></div><div class="top-right"><span class="status-dot"></span> System online <span class="avatar">A</span></div></header>
+<section class="content">{% block content %}{% endblock %}</section>
+</main></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body></html>

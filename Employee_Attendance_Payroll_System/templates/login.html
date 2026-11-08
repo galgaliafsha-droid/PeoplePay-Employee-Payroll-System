@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PeoplePay Login</title><link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"></head>
+<body class="login-page"><div class="login-card"><div class="brand centered"><span class="brand-mark">P</span><span>PeoplePay<small>WORKFORCE PORTAL</small></span></div><p class="eyebrow">WELCOME BACK</p><h1>Sign in to your workspace</h1><p class="muted">Manage people, attendance and payroll in one place.</p>
+<form id="loginForm"><label>Username</label><input name="username" id="usernameInput" placeholder="Enter username" required><label>Password</label><input name="password" id="passwordInput" type="password" placeholder="Enter password" required><button class="primary full">Sign in →</button><p id="message" class="message"></p></form>
+<button type="button" onclick="document.getElementById('usernameInput').value='admin';document.getElementById('passwordInput').value='admin123';" style="background:none;border:1px solid #dfe4ec;border-radius:7px;width:100%;padding:10px;margin-top:8px;cursor:pointer;color:#667085;font-size:12px;">⚡ Fill demo credentials (admin / admin123)</button><div class="login-foot">
+  <b>Demo credentials:</b><br>
+  Username: <code>admin</code> &nbsp;|&nbsp; Password: <code>admin123</code>
+</div></div><script src="{{ url_for('static',filename='js/app.js') }}"></script></body></html>
